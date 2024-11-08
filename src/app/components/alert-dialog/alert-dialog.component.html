@@ -1,0 +1,11 @@
+<div class="dialog">
+    <h1 mat-dialog-title>
+        <div *ngIf="data.type == 'O'">O won 🥳!</div>
+        <div *ngIf="data.type == 'X'">X won 🥳!</div>
+        <div *ngIf="data.type == 'N'">Game draw!</div>
+    </h1>
+    <mat-dialog-actions>
+        <button mat-button (click)="playAgain()">Play Again</button>
+    <button mat-button (click)="close()">Close</button>
+    </mat-dialog-actions>
+</div>
