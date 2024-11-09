@@ -79,8 +79,6 @@ export class AppComponent {
   }
   showAlert(char: string) {
     let dialogRef = this.dialog.open(AlertDialogComponent, { 
-      height: "25vh",
-      width: "20vw",
       data: { type: char } 
     });
     dialogRef.afterClosed().subscribe((result: boolean) => {

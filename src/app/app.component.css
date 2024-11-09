@@ -14,7 +14,13 @@ table {
     height: 50vh;
     border: 0px;
     border-spacing: 15px;
-    /* border-radius: 10px; */
+    table-layout: fixed;
+    width: 30vw;
+}
+@media only screen and (max-width: 600px) {
+    td {
+        width: 90px !important;
+    }
 }
 td {
     background-color: #4b495f;
