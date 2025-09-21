@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 table {
     height: 50vh;
@@ -56,4 +57,35 @@ td {
     font-size: 50px;
     font-weight: 200;
     margin-bottom: 30px;
+}
+.selectScreen {
+    display: flex;
+    flex-direction: column;
+    color: #f4f0f8;
+    justify-content: space-evenly;
+}
+.mainButton {
+    background-color: #4b495f;
+    width: 30%;
+    height: 90px;
+    font-size: 3em;
+}
+.mainSubHeading {
+    margin-bottom: 20%;
+    font-size: 1.5em;
+}
+.mainHeading {
+    margin-top: 100px;
+}
+.obutton {
+    color: #ef917e;
+    margin-right: 20px;
+}
+.xbutton {
+    color: #dd7f9f;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
 }

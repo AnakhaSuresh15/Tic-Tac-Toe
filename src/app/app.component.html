@@ -1,6 +1,14 @@
-<div class="main">
-  <div class="heading">Tic Tac Toe</div>
-  <table>
+<div class="main" [ngStyle]="{'justify-content': !gameScreen ? 'normal' : 'center'}">
+  <div class="heading" [ngClass]="{'mainHeading': !gameScreen}">Tic Tac Toe</div>
+  <div *ngIf="!gameScreen" class="selectScreen">
+    <div class="mainSubHeading">Select the key you want to play with<br>
+    Note: O starts first!!</div>
+    <div>
+      <button class="mainButton obutton" (click)="startScreen('X')">O</button>
+      <button class="mainButton xbutton" (click)="startScreen('O')">X</button>
+    </div>
+  </div>
+  <table *ngIf="gameScreen" id="table">
     <tr>
       <td id="cell0" class="cellText" (click)="cellSelected(0)"></td>
       <td id="cell1" class="cellText" (click)="cellSelected(1)"></td>
@@ -17,5 +25,8 @@
       <td id="cell8" class="cellText" (click)="cellSelected(8)"></td>
     </tr>
   </table>
-  <button class="reset" (click)="reset()">Reset</button>
+  <div class="footer">
+    <button *ngIf="gameScreen" class="reset" (click)="reset()">Reset</button>
+    <button *ngIf="gameScreen" class="reset" (click)="restart()">Restart</button>
+  </div>
 </div>
